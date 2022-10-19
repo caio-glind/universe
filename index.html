@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="staly.css">
+    <title>Loja</title>
+</head>
+<body>
+    <header id="header">
+        <a id="logo" aria-expanded="false" href="">Logo</a>
+        <nav id="nav">
+            <button id="btn-mobile">menu
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu">
+                <li><a id="cd" href="/">Sobre</a></li>
+                <li><a id="cd"href="/">Produltos</a></li>
+                <li><a id="cd"href="/">Portifoliio</a></li>
+                <li><a id="cd"href="/">contado</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="baaner">
+        <img class="imgBaaner" id="img1" src="https://i.pinimg.com/736x/0a/e4/86/0ae486051aca0229ed8de73f8606782b.jpg" /> 
+        <img class="imgBaaner"  id="img2" src="https://wallpapers.com/images/hd/astronaut-in-retro-glitch-space-25jnl7kqzvgdqq7e.jpg" />
+        <img class="imgBaaner"  id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSvFr6nbO91XNvftGHHv2X4khiHxHrXPeUHA&usqp=CAU" />  
+        <img class="imgBaaner" id="img4" src="https://cutewallpaper.org/27/black-wallpaper-of-astronauts/wallpaper-astronaut-amoled-black-aesthetic-space-space-aesthetics-background-download-free-image.png" />  
+        <img class="imgBaaner" id="img5" src="https://i.pinimg.com/originals/c1/d0/bb/c1d0bb65fa7b7cf673abd0d7b14c51b1.jpg" />    
+    </div>
+    <script >
+
+const btnmobile =document.getElementById('btn-mobile');
+
+function toggleMenu(event)
+{
+    if(event.type=== 'touchstart')event.preventDefault();
+
+    const nav =document.getElementById('nav');
+    nav.classList.toggle('active');
+    const active =nav.classList.contains('active');
+    event.currentTarget.setAttribute('aria-expanded', active)
+}
+
+
+btnmobile.addEventListener('click', toggleMenu);
+btnmobile.addEventListener('touchstart', toggleMenu);
+    </script>
+</body>
+</html>
