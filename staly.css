@@ -1,24 +1,35 @@
 @import url(/fonts);
-*{
-     margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
+
+* {
+    margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
-    
+
 }
-body{
-    background: #001;
+
+/*----------------configuiraçã------------*/
+.cursiva {
+    font-family: 'Fuzzy Bubbles', cursive;
 }
-a{
-    color:#001;
+
+body {
+    background: #08080A;
+}
+
+a {
+    color: #001;
     text-decoration: none;
 }
-#logo
-{
+
+#logo {
     font-size: 1.5rem;
-font-weight: bold;
+
 }
-#header
-{
+
+#header {
     box-sizing: border-box;
     height: 70px;
     padding: 1rem;
@@ -26,76 +37,90 @@ font-weight: bold;
     align-items: center;
     justify-content: space-between;
     background: #fff;
-    
+
 }
-#menu
-{
+
+#menu {
     display: flex;
     list-style: none;
     gap: .5rem;
 }
-#menu a
-{
+
+#menu a {
     display: block;
     padding: .5rem;
 
 }
-#btn-mobile{
+
+#btn-mobile {
     display: none;
 }
+
 /*-------------------baaner normal ------------------------------*/
-.baaner{
-   
+.baaner {
+    background: url(https://4kwallpapers.com/images/wallpapers/astronaut-galaxy-space-suit-dream-triangle-butterflies-3840x2160-8085.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
     position: relative;
-    width:100%;
+    width: 100%;
     height: 65ch;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.baaner h2 {
+    position: relative;
+    top:1ch;
+    text-align: center;
+    font-size: 7em;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
     
 }
-.baaner .imgBaaner{
-    width:150px;
-    height: 150px;
-    margin: 10px;
-    border-radius: 50ch;
-    border-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-    border: 5px solid;
-    -webkit-transition:  all .01s cubic-bezier(.190, 1.000, .220, 1.000);
-    -moz-transition: all .01s cubic-bezier(.190, 1.000, .220, 1.000);
-    -ms-transition: all .01s cubic-bezier(.190, 1.000, .220, 1.000);
-    -o-transition: all .01s cubic-bezier(.190, 1.000, .220, 1.000);
-    transition: all .01s cubic-bezier(.190, 1.000, .220, 1.000);
+
+
+
+.baaner p {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1em;
+    color: #fff;
 }
-#img1{
-    animation: voa 1s infinite;
-    animation-direction: alternate-reverse;
+
+/*----------------produtos----------------------------*/
+.produtos{
+    background-image: linear-gradient(0, #00313f 0, #002d37 7.14%, #00292f 14.29%, #022327 21.43%, #061e1e 28.57%, #051716 35.71%, #030e0d 42.86%, #000000 50%, #000000 57.14%, #000000 64.29%, #000000 71.43%, #000000 78.57%, #000000 85.71%, #000000 92.86%, #000000 100%);
 }
+
+
+
 /*---------------------------------------animação-------------------------------------------*/
-@keyframes voa{
-    0%{
+@keyframes voa {
+    0% {
         transform: translateY(-10ch);
         transform: translateX(-10ch);
 
     }
-    
-    100%{
+
+    100% {
         transform: translateX(10ch);
         transform: translateY(10ch);
     }
-              
+
 }
-@media (max-width:600px)
-{
+
+@media (max-width:600px) {
+
     /*-------------------------menu-----------------*/
-    #btn-mobile
-    {
+    #btn-mobile {
         display: block;
     }
-    #menu
-    {
+
+    #menu {
         display: block;
-        
+
         position: absolute;
         width: 100%;
         top: 70px;
@@ -107,21 +132,22 @@ font-weight: bold;
         visibility: hidden;
         overflow-y: hidden;
 
-    } 
-    #nav.active #menu
-    {
+    }
+
+    #nav.active #menu {
         z-index: 1;
         height: calc(100vh - 70px);
         visibility: visible;
         overflow-y: auto;
     }
-    #menu a 
-    {
+
+    #menu a {
         padding: 1rem 0;
-        margin:0 1rem;
-        border-bottom: 2px solid rgba(0, 0,0, .05);
-    }  
-    #btn-mobile{
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+
+    #btn-mobile {
         display: flex;
         padding: .5rem 1rem;
         font-size: 1rem;
@@ -130,37 +156,39 @@ font-weight: bold;
         cursor: pointer;
         gap: .5rem;
     }
-    #hamburger
-    {
+
+    #hamburger {
         display: block;
-      width: 20px;
-      border-top:2px solid ;
+        width: 20px;
+        border-top: 2px solid;
     }
-    #hamburger::after , #hamburger::before
-    {
+
+    #hamburger::after,
+    #hamburger::before {
         content: '';
         display: block;
         width: 20px;
         height: 2px;
-        background:currentColor;
+        background: currentColor;
         margin-top: 5px;
         transition: .3s;
         position: relative;
     }
-    #nav.active #hamburger
-    {
-       border-top-color: transparent;
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
     }
-    #nav.active #hamburger::before
-    {
-       transform: rotate(135deg);
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
     }
-    #nav.active #hamburger::after
-    {
+
+    #nav.active #hamburger::after {
         transform: rotate(-135deg);
         top: -7px;
 
     }
+
     /**/
 
 
