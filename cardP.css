@@ -109,7 +109,7 @@ transition: 0.5s;
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right,transparent,#423535);
+    background: linear-gradient(to bottom,transparent,#1779ff);
     animation: anima1 2s linear infinite;
 }
 @keyframes anima1

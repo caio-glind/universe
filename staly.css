@@ -30,6 +30,7 @@ a {
 }
 
 #header {
+    position: relative;
     box-sizing: border-box;
     height: 70px;
     padding: 1rem;
@@ -37,6 +38,8 @@ a {
     align-items: center;
     justify-content: space-between;
     background: #fff;
+    z-index: 1;
+   
 
 }
 
@@ -58,26 +61,35 @@ a {
 
 /*-------------------baaner normal ------------------------------*/
 .baaner {
-    background: url(https://4kwallpapers.com/images/wallpapers/astronaut-galaxy-space-suit-dream-triangle-butterflies-3840x2160-8085.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
     position: relative;
     width: 100%;
-    height: 65ch;
+    height: 85ch;
     display: flex;
     justify-content: center;
     align-items: center;
+   
+}
+.baaner img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
 }
 
 .baaner h2 {
-    position: relative;
-    top:1ch;
+    position: absolute;
     text-align: center;
-    font-size: 7em;
-    z-index: 1;
-    color: rgb(0, 0, 0);
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+    font-size: 100px;
+    z-index: 2;
+    color: rgb(253, 252, 252);
+   /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  */  
+  
+}
+.baaner   hr{
+    position: relative;
+     color: #fff;
+     font-size: 10ch;
+    z-index: 2;
     
 }
 
