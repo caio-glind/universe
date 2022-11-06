@@ -196,6 +196,12 @@ footer p:hover{
     #btn-mobile {
         display: block;
     }
+#header h2 {
+    position: relative;
+    top: 1ch;
+font-size: 25px;
+
+}
 
     #menu {
         display: block;
