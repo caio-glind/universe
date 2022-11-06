@@ -23,10 +23,19 @@ a {
     color: #001;
     text-decoration: none;
 }
+a:hover{
+    color: #00313f;
+}
 
 #logo {
+    position: relative;
+    display: flex;
     font-size: 1.5rem;
 
+}
+#logo img{
+    width: 5ch;
+    height: 5ch;
 }
 
 #header {
@@ -38,7 +47,7 @@ a {
     align-items: center;
     justify-content: space-between;
     background: #fff;
-    z-index: 1;
+    z-index: 3;
    
 
 }
@@ -74,11 +83,14 @@ a {
     height: 100%;
     opacity: 0.5;
 }
+#imgBanneCelular{
+    display: none;
+}
 
 .baaner h2 {
     position: absolute;
     text-align: center;
-    font-size: 100px;
+    font-size: 10ch;
     z-index: 2;
     color: rgb(253, 252, 252);
    /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
@@ -105,8 +117,58 @@ a {
 .produtos{
     background-image: linear-gradient(0, #00313f 0, #002d37 7.14%, #00292f 14.29%, #022327 21.43%, #061e1e 28.57%, #051716 35.71%, #030e0d 42.86%, #000000 50%, #000000 57.14%, #000000 64.29%, #000000 71.43%, #000000 78.57%, #000000 85.71%, #000000 92.86%, #000000 100%);
 }
-
-
+/*------------------------------------roda pé----------------------------------------------------*/
+footer{
+    position: relative;
+    width: 100%;
+    background-color:#fff;
+    color: #001;
+    height: 25ch;   
+    z-index: 3;
+    border-color: #001;
+    border: 1px solid;
+   
+}
+footer p{
+    cursor: pointer;
+}
+footer p:hover{
+    color: #F15;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    box-sizing: border-box;
+    color: #001;
+    box-shadow:0 5px 20px rgba(0, 0, 0, 0.178);
+}
+#map{
+    margin-left: 2vw;
+    margin-top: 5vh;
+    width: 30vw;
+    height: 25vh;
+    border-radius: 30px;
+    position: relative;
+    box-shadow:0 5px 20px rgba(0, 0, 0, 0.377);
+}
+#info{
+    margin-right: 5vw;
+    margin-top: 5vh;
+    width: 25vw;
+   
+    text-align: justify;
+}
+.midias{
+    
+    width: 100%;
+    display: inline-flex;
+}
+.midias img{
+    width: 4ch;
+    cursor: pointer;
+    
+}
 
 /*---------------------------------------animação-------------------------------------------*/
 @keyframes voa {
@@ -121,6 +183,11 @@ a {
         transform: translateY(10ch);
     }
 
+}
+@media (max-width:900px) {
+    .baaner h2{
+        font-size: 5ch;
+    }
 }
 
 @media (max-width:600px) {
@@ -140,14 +207,14 @@ a {
         background: #e7e7e7;
         height: 0px;
         transition: .6s;
-        z-index: 1500px;
+        z-index: 5;
         visibility: hidden;
         overflow-y: hidden;
 
     }
 
     #nav.active #menu {
-        z-index: 1;
+        z-index: 3;
         height: calc(100vh - 70px);
         visibility: visible;
         overflow-y: auto;
@@ -201,7 +268,15 @@ a {
 
     }
 
-    /**/
-
+    /*------baner----------*/
+   #imgBanneCelular{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+   }
+    #imgBanner{
+        display: none;
+    }
 
 }

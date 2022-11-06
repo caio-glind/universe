@@ -1,0 +1,113 @@
+
+/*----------------------------produtos----------------------------*/
+.produto{
+    color: #fff;
+    z-index: 1;
+ display: flex;
+ /*background: #f15;*/
+}
+#carouselExampleFade{
+    position: relative;
+    margin-left: 5%;
+    margin-top: 10ch;
+    width: 50ch;
+    height: 50ch;
+}
+#carouselExampleFade img{
+    width: 40ch;
+    height: 40ch;
+}
+.infoma{
+    text-align: justify;
+    margin-left: 1ch;
+    margin-top: 10ch;
+    position: relative;
+    width: 30ch;
+    height: 40ch;
+}
+.pagamento{
+    margin-left: 4ch;
+    margin-top: 10ch;
+    position: relative;
+    width: 30ch;
+    height: 40ch;
+    list-style: none;
+}
+.pagamento ul {
+    list-style: none;
+}
+.carrinho button{
+    background: #d75413;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    height: 5ch;
+    width: 20ch;
+    animation: boto 1.5s infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes boto{
+    0%{
+        transform: translateX(2ch);
+        transform: translateY(2ch);
+        height: 5ch;
+        width: 20ch;
+        top: 2ch;
+    }
+   100%{
+    transform: translateX(3ch);
+       height: 7ch;
+       width: 23ch;
+       top: 4ch;
+   } 
+}
+@media(max-width:1000px){
+    /*---------------------------produto----------------------------------*/
+    .produto{
+        display: block;
+        position: relative;
+        margin: 2ch;
+       }
+       #carouselExampleFade{
+           position: relative;
+           margin-left: -0.5ch;
+           margin-top: 10ch;
+           width: 35ch;
+           height: 35ch;
+           top: 6ch;
+       }
+       #carouselExampleFade img{
+           width: 35ch;
+           height: 35ch;  
+       }
+       .pagamento{
+        margin-left: 1ch;
+        top: -20ch;
+        position: relative;
+        width: 30ch;
+        height: 40ch;
+        list-style: none;
+    }
+    .infoma h1{
+    position: relative;
+    top: -15ch;
+    font-size: 40px;
+    }
+    .infoma{  
+        top: -10ch;
+    }
+    .pagamento{
+        top: -36ch;
+    }
+    .carrinho button{
+        margin-left: 5ch;
+    }
+    /*------------roda pé----------------------------*/
+    footer{
+        position: relative;
+        background-color: #fff;
+        color: #001;
+        height: 40vh;   
+        top:0ch;
+    }
+}
